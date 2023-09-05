@@ -106,11 +106,13 @@ cpdef np.ndarray condense_tree(np.ndarray[np.double_t, ndim=2] hierarchy,
             lambda_value = INFTY
 
         if left >= num_points:
+            print(hierarchy[left - num_points][3]
             left_count = <np.intp_t> int(hierarchy[left - num_points][3])
         else:
             left_count = 1
 
         if right >= num_points:
+            print(hierarchy[right - num_points][3])
             right_count = <np.intp_t> int(hierarchy[right - num_points][3])
         else:
             right_count = 1
